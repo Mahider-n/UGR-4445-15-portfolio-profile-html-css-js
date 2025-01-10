@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/query.css">
+</head>
+<body>
+    <!-- header part -->
+    <header>
+        <nav id="desktop-nav">
+            <div class="logo">MAHIDER NARDOS</div>
+            <div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="cv.html">CV</a></li>
+                    <li><a href="adventure.html">Adventures</a></li>
+                </ul>
+            </div>
+        </nav>
+        <nav id="hamburger-nav">
+            <div class="logo">Mahider Nardos</div>
+            <div class="hamburger-menu">
+                <div class="hamburger-icon" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="menu-links">
+                    <li><a href="#home" target="_blank" onclick="toggleMenu()">Home</a></li>
+                    <li><a href="about.html" onclick="toggleMenu()">About</a></li>
+                    <li><a href="education.html" onclick="toggleMenu()">Education</a></li>
+                    <li><a href="cv.html" onclick="toggleMenu()">CV</a></li>
+                    <li><a href="adventure.html" onclick="toggleMenu()">Adventures</a></li>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- main -->
+    <main id="home">
+        <span><p>Hello,I'm</p></span>
+        <h1>Mahider Nardos</h1>
+        <section class="section one">
+            <h2>Get to know me</h2>
+            <div class="content-container">
+                <p> 
+                    Hello! My name is Mahider Nardos, and I am a passionate Software Engineering student in
+                    my third year at Addis Ababa Institute of Technology. Throughout my studies, I've had the opportunity 
+                    to work on various projects, including developing applications that emphasize user experience. 
+                    My coursework has covered important subjects like Data Structures, and Web Development  allowing me 
+                    to build a solid foundation in languages such as Python, Java, and JavaScript.Outside of my academic pursuits, 
+                    I enjoy coding personal projects, playing video games, and traveling. I also love hiking and photography during 
+                    my free time, which helps me relax and recharge. Looking ahead, I aspire to become a full-stack developer, 
+                    with a keen interest in creating innovative applications that solve real-world problems. 
+                    In the future, I hope to contribute to an exciting tech company where I can continue to grow and make an impact. 
+                </p>
+                <img src="./images/profile-pic.png" alt="Portrait of Mahider Nardos" class="profile">
+            </div>
+            <div class="links-container">
+                <a href="#contact">Contact me</a>
+                <a href="./files/final_resume.pdf"  download class="download-btn">Download CV</a>
+            </div>
+            <div id="icon-container">
+                <div class="social-icon">
+                    <a href="https://www.linkedin.com/in/mahider-nardos-708848212/" target="_blank" rel="noopener noreferrer"><img src="./images/linkedin.png" alt="My LinkedIn profile" class="icon"></a>
+                </div>
+                <div class="social-icon">
+                    <a href="https://github.com/Mahider-n" target="_blank" rel="noopener noreferrer" ><img src="./images/github.png" alt="My Github profile" class="icon"></a>
+                </div>
+                
+            </div>
+        </section>
+    </main>
+    <!-- footer -->
+    <footer id="contact">
+        <h2>Contact</h2>
+        <div class="contact-info-upper-container">
+            <div class="contact-container">
+                <img src="./images/email.png" alt="Email icon" class="contact-icon">
+                <p><a href="mailto:Mahidernardos@gmail.com">Mahidernardos@gmail.com</a></p>
+            </div>
+            <div class="contact-container">
+                <img src="./images/linkedin.png" alt="LinkedIn icon" class="contact-icon">
+                <p><a href="https://www.linkedin.com/in/mahider-nardos-708848212/" target="_blank" rel="noopener noreferrer" class="contact-icon">LinkedIn</a></p>
+            </div>
+        </div>
+        <nav class="nav-container footer">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="adventure.html">Adventures</a></li>
+            </ul>
+        </nav>
+        <p class="copy-right">Copyright &#169; 2024 Mahider Nardos. All Rights Reserved.</p>
+    </footer>
+    <script src="./js/script.js"></script>
+</body>
+</html>

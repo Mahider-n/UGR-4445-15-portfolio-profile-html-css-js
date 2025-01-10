@@ -1,0 +1,942 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+/* general styling*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+img{
+    width: 100%;
+}
+body {
+    font-family: "Poppins", sans-serif;
+    width: 100%;
+    
+}
+
+html, body {
+    margin: 0;    /* Removes any default margins */
+    padding: 0;   /* Removes default padding */
+    width: 100%;  /* Ensures full width */
+    overflow-x: hidden; /* Prevents horizontal scrolling issues */
+}
+/* header */
+
+header{
+    background: rgb(11, 11, 110);
+    width: 100%;
+}
+nav,
+.nav-links {
+    display: flex;
+}
+nav {
+    justify-content: space-around;
+    align-items: center;
+    height: 17vh;
+}
+.nav-links {
+    gap: 60px;
+    list-style: none;
+    font-size: 24px;
+}
+a {
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    text-decoration-color: white;
+}
+a:hover {
+    text-decoration: underline;
+    text-underline-offset: 16px;
+    text-decoration-color: rgb(181, 181, 181);
+}
+a,
+.btn {
+    transition: all 300ms ease;
+}
+.logo {
+    font-size: 25px;
+    color: white;
+    font-weight: bold;
+}
+
+/* HAMBURGER MENU */
+#hamburger-nav {
+    display: none;
+}
+.hamburger-menu {
+    position: relative;
+    display: inline-block;
+}
+.hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    cursor: pointer;
+}
+.hamburger-icon span {
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    transition: all 0.3 ease-in-out;
+}
+.menu-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    width: fit-content;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3 ease-in-out;
+}
+.menu-links a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    font-size: 24px;
+    color: black;
+    text-decoration: none;
+    transition: all 0.3 ease-in-out;
+}
+.menu-links li {
+    list-style: none;
+}
+.menu-links.open {
+    max-height: 300px;
+}
+.hamburger-icon.open span:first-child {
+    transform: rotate(45deg) translate(10px, 5px);
+}
+.hamburger-icon.open span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger-icon.open span:last-child {
+    transform: rotate(-45deg) translate(10px, -5px);
+}
+.hamburger-icon span:first-child {
+    transform: none;
+}
+.hamburger-icon span:first-child {
+    opacity: 1;
+}
+.hamburger-icon span:first-child {
+    transform: none;
+}
+
+/* footer */
+footer{
+    text-align: center;
+    background: rgb(11, 11, 110);
+}
+footer h2{
+    font-size: 25px;
+    color: white;
+    padding: 20px;
+}
+.nav-container ul {
+    list-style-type: none;  
+    padding: 0;  
+    display: flex;  
+    justify-content: space-around;  
+}
+
+.nav-container li {
+    margin: 0 50px;  
+}
+.nav-container a {
+    text-decoration: none;  
+    color: white;  
+}
+.nav-container a:hover {
+    text-decoration: underline;
+    text-decoration-color: rgb(181, 181, 181);
+}
+.copy-right{
+    color: white;
+    padding-bottom: 15px;
+    font-size: small;
+}
+/*contact-info inside footer*/
+.contact-info-upper-container {
+    display: flex;  
+    gap: 100px;  
+    background-color: rgb(243, 238, 238);
+    border-radius: 8px;
+    margin: 0 auto; /* Center the container */
+    align-items: center;
+    padding: 20px; /* Add padding for better spacing */
+    max-width: 1000px; /* Set a max-width for larger screens */
+}
+.contact-info-upper-container:hover{
+    transform: scale(1.05); 
+}
+.contact-container {
+    display: flex;  
+    align-items: center;  
+}
+.contact-container img{
+    padding: 0px 8px 0px;
+    width: 50px;
+    height: auto;
+}
+.contact-info-upper-container .contact-container:last-child .contact-icon {
+    width: 40px;  
+}
+.contact-container p a{
+    color: black;
+    font-size: 20px;
+    text-decoration: none;
+    list-style: none;
+    margin-top: 50px;
+    padding-bottom: 10px;
+}
+
+/* Home page styling */
+
+/* main */
+main{
+    margin-left: 140px;
+    margin-top: 80px;
+}
+#home span p,h1{
+    margin-left: 190px;
+}
+#home span p{
+    margin-left: 290px;
+    font-size: 20px;
+    opacity: 0.7;
+}
+#home p{
+    line-height: 1.5;
+    font-size: 16px;
+}
+.section h2{
+    margin-left: 250px;
+    font-size: 20px;
+    padding-bottom: 30px;
+    font-weight: lighter;
+
+} 
+/*  */
+ 
+/*  */
+.content-container {
+    display: flex;
+    align-items:flex-start;
+    justify-content: center;
+    text-align: left;  
+}
+.content-container p{
+display: block;
+}
+.profile {
+    width: 990px;
+    height: 350px;
+    margin-left: 20px; 
+    padding-right: 150px;
+    margin-top: -80px;
+} 
+.content-container img:hover{
+    transform: scale(1.08); 
+}
+.links-container {
+    display: flex;
+    margin-bottom: 20px;  
+}
+.links-container a {
+    text-decoration: none;
+    padding: 5px 50px;  
+    font-size: 18px;  
+    margin-top: 30px;
+    border: 2px solid rgb(11, 11, 110);  
+    border-radius: 20px;  
+    background-color: white;  
+    color: rgb(11, 11, 110);  
+    margin-left: 100px;
+}
+.links-container a:hover {
+    background-color: rgb(11, 11, 110);  
+    color: white; 
+}
+#icon-container {
+    display: flex;
+    gap: 250px;  
+    padding-left: 170px;
+    padding-bottom: 80px;
+}
+.social-icon {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;  
+}
+.icon {
+    width: 50px;  
+    height: 50px; 
+     
+}
+.icon:hover{
+    transform: scale(1.09); 
+}
+
+/* about page styling */
+
+#about p{
+    padding-right: 19px;
+    font-size: 16px;
+}
+#about h2{
+    font-weight: bold;
+    font-size: 30px;
+    margin: 0px;
+    padding-left: 110px;
+}
+#about aside{
+    display: flex;
+    flex-direction: column;
+    background: rgba(233, 234, 240, 1);
+    margin-right: 130px;
+    margin-left: 15px;
+    padding: 60px;
+    border: 1px solid gray; 
+    border-radius: 10px;
+    height: auto;
+}
+#about .right-arrow{
+    width: 60px;
+    height: 60px;
+    padding: 0px 0px 10px 150px;
+}
+#about .right-arrow:hover{
+    transform: scale(1.09);
+    cursor: pointer;
+}
+#about .image-wrapper {
+    padding-left: 45px;
+    display: flex;  
+    gap: 60px;  
+}
+#about .image-wrapper img {
+    display: flex;
+    height: 250px;  
+    width: 200px; 
+    border-radius: 10px;
+}
+/* about page(section two) */
+.hobbies-interest {
+    display: flex;
+    background: rgba(233, 234, 240, 1);
+    border-radius: 10px;
+    margin: 20px 130px 70px 0px;
+    padding: 30px 0px 0px 90px;
+    border: 1px solid gray; 
+    
+}
+.hobbies-interest .image-wrapper {
+    padding-left: 50px;
+    display: flex;
+    flex-direction: column;  
+}
+.hobbies-interest .image-container {
+    margin-left: 90px;
+    display: flex; /* Align images horizontally */
+    gap: 300px; /* Space between images */
+}
+.hobbies-interest .image-container img{
+    width: 50%;
+    height: 300px;
+}
+.hobbies-interest .image-container img:hover{
+    transform: scale(1.07);
+}
+.hobbies-interest .button-wrapper {
+    display: flex;  
+    gap: 130px;  
+    padding-bottom: 30px;
+    margin-right: 150px;
+}
+.hobbies-interest .button-wrapper button{
+    text-decoration: none;
+    padding: 6px 80px;  
+    font-size: 18px;  
+    border: 2px solid rgb(11, 11, 110);  
+    border-radius: 20px;  
+    background-color: white;  
+    color: rgb(11, 11, 110); 
+    margin-left: 100px; 
+}
+.hobbies-interest .button-wrapper button:hover{
+    cursor: pointer;
+    background-color: rgb(11, 11, 110);  
+    color: white; 
+}
+
+
+/* about js part styling */
+
+/* Modal Styles */
+.modal {
+    display: none;  
+    position: fixed;  
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%;  
+    height: 100%;  
+    background-color: rgba(0, 0, 0, 0.5);  
+    justify-content: center;  
+    align-items: center;  
+}
+
+.modal-content {
+    background-color: white; /* White background for modal */
+    padding: 20px; /* Space inside the modal */
+    border-radius: 8px; /* Rounded corners */
+    text-align: center; /* Center text */
+    padding-top: 15px; /* Space at the top */
+    margin: 80px 100px;
+
+}
+/* Image styles within the modal */
+.modal-content img {
+    width: 400px;  
+}
+/* Close Button Styles */
+.close-btn {
+    position: absolute;  
+    top: 10px;  
+    right: 15px;  
+    background: red; 
+    border: none;  
+    font-size: 30px;  
+    color: white;  
+    cursor: pointer;  
+    width: 40px;  
+    height: 40px;  
+    border-radius: 50%;  
+    display: flex;  
+    align-items: center;  
+    justify-content: center;  
+}
+
+
+/* education page styling  */
+#education{
+    margin-right: 90px;
+}
+#education h2{
+    font-weight: bold;
+    font-size: 24px; 
+    /* padding: 50px 0px; */
+    padding-right: 30px;
+    margin: 0;
+}
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Aligns items at the start of the cross axis */
+    margin: 20px 0; /* Adds some vertical spacing */
+}
+
+.table, .certification {
+    flex: 1; /* Allows both sections to grow equally */
+    margin: 0 15px; /* Adds horizontal spacing between the sections */
+}
+/*  */
+.table {
+    flex: 1; /* Allows the table section to grow */
+    margin: 0 10px; /* Adds horizontal spacing */
+    height: 400px; /* Fixed height for the table container */
+    width: 400px; /* Set width for the table section */
+    border: 1px solid gray;  
+    border-radius: 10px; /* Rounds the corners of the table */
+    overflow: hidden; /* Ensures content stays within rounded corners */
+    background: rgba(233, 234, 240, 1);
+    padding: 30px; /* Adjust padding for consistent spacing */
+    padding-bottom: 100px;
+    border-style: solid;
+    border-color: gray;
+    line-height: 1.6;
+}
+.table:hover{
+    transform: scale(1.03);
+}
+table {
+    background-color: white;
+    height: auto; /* Let the height adjust to content */
+    width: 100%; /* Makes the table take full width of its container */
+    border-collapse: collapse; /* Ensures no double borders */   
+}
+th, td {
+    padding: 7px; /* Decrease space inside table cells */
+    border: 1px solid #ccc; /* Adds a light border to cells */
+    font-size: 13px; /* Optionally decrease font size for smaller cells */
+}
+.certification{
+    flex: 1;
+    padding: 10px;
+    margin-top: 0px;
+    padding-bottom: 10px;
+    border: 1px solid #ccc; /* Adds a border around the table */
+    border-radius: 10px; /* Rounds the corners of the table */
+    overflow: hidden; /* Ensures content stays within rounded corners */
+    background: rgba(233, 234, 240, 1);
+    border-style: solid;
+    border-color: gray;
+    height: 510px;
+
+}
+.certification:hover{
+    transform: scale(1.03);
+}
+.certification h2{
+    font-size: 24px;
+}
+.certification .main-content {
+    display: flex; /* Enables flexbox layout */
+    align-items: center; /* Vertically centers the items */
+    justify-content: space-between; /* Creates space between items */
+}
+
+.certification .content-wrapper {
+    display: flex; /* Enables flexbox for inner content */
+    align-items: center; /* Vertically centers the paragraph and image */
+}
+.certification .main-content p{
+    padding-top: 10px;
+    font-size: 14px;
+    margin-top: -15px;
+    margin-right: 10px;
+    line-height: 1.7;
+}
+.main-content img{
+    max-width: 200px;  
+    height: 300px; /* Maintains aspect ratio */
+    padding-right: 30px;
+}
+.certification button{
+    text-decoration: none;
+    padding: 5px 80px;  
+    font-size: 18px;  
+    border: 2px solid rgb(11, 11, 110);  
+    border-radius: 20px;  
+    background-color: white;  
+    color: rgb(11, 11, 110); 
+    margin-left: 100px; 
+    margin-top: 50px;
+    margin-bottom: 5px;
+}
+.certification button:hover{
+    cursor: pointer;
+    background-color: rgb(11, 11, 110);  
+    color: white; 
+}
+/* education page section-two*/
+#education .section.two {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgba(233, 234, 240, 1);
+    overflow: hidden;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 16px;
+    text-align: center;
+    margin: 50px 0px 80px 0px;
+}
+#education .section.two:hover{
+    transform: scale(1.03);
+
+}
+#education .section.two h2{
+    font-size: 24px;
+    padding-right: 90px;
+}
+video {
+    max-width: 800px;
+    height: auto;
+    margin-bottom: 16px;
+}
+
+.links-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 16px; 
+}
+
+.links-wrapper a {
+    text-decoration: none;
+    padding: 5px 80px;  
+    font-size: 18px;  
+    border: 2px solid rgb(11, 11, 110);  
+    border-radius: 20px;  
+    background-color: white;  
+    color: rgb(11, 11, 110); 
+    margin-left: 100px; 
+    margin-bottom: 20px;
+}
+
+.links-wrapper a:hover {
+    cursor: pointer;
+    background-color: rgb(11, 11, 110);  
+    color: white; 
+}
+
+/* CV page styling  */
+
+#cv {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin: 20px;
+    margin-top: 80px;
+    margin-left: 140px;
+    margin-right: 110px;
+}
+#cv h2{
+    margin: 0px;
+}
+.skills-section {
+    flex: 1;
+    max-width: 300px;
+    padding-right: 20px;
+}
+#cv .section.one{ 
+    margin-bottom: 40px ;
+    text-align:left;
+    border-style: solid;
+    border: 1px solid gray;
+    background: rgba(233, 234, 240, 1);
+    border-radius: 10px;
+    height: 1050px;
+}
+#cv .section.one:hover{
+    transform: scale(1.03);
+}
+#cv .section.one h2{
+    font-size: 24px;
+    font-weight: bold;
+    padding-left: 80px;
+    padding-top: 50px;
+    padding-bottom: 60px;
+
+}
+.skills-section h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.skills ul {
+    list-style-type: none;
+    padding-left: 50px;
+}
+
+.skills li {
+    margin-bottom: 90px;
+}
+#cv .downward-arrow{
+    width: 80px;
+    height: 80px;
+    margin: 0;
+    padding: 0px 100px 10px;
+}
+#cv .downward-arrow:hover{
+    cursor: pointer;
+}
+#downwardArrow.rotated {
+    transform: rotate(180deg); /* Rotate the arrow */
+}
+
+.content {
+    flex: 3;
+    padding-left: 20px;
+}
+.container {
+    padding: 40px;
+    gap: 30px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.left-content, .right-content {
+    width: 88%; /* Adjust the width as needed */
+    padding: 10px;
+    border-radius: 10px;
+    background: rgba(166, 171, 195, 1);
+    overflow: hidden;
+    border: 1px solid rgb(38, 49, 109);
+    text-align: center;
+    margin: 0;
+    padding-right: 40px;
+    height: 600px;
+    margin-top: 0px;
+    font-size: 15px;
+    
+}
+.left-content:hover, .right-content:hover{
+    transform: scale(1.03);
+}
+.container h3{
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+.container p{
+    padding-top: 10px;
+    line-height: 1.7;
+}
+.professional h2{
+    font-size: 24px;
+    font-weight: bold;
+    padding-top: 30px;
+}
+.professional{
+    text-align:center;
+    border-style: solid;
+    border-color: gray;
+    background: rgba(233, 234, 240, 1);
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+.cv-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    background: rgba(233, 234, 240, 1);
+    overflow: hidden;
+    border: 1px solid gray;
+    border-radius: 5px;
+    text-align: center;
+    border-style: solid;
+    border-color: gray;
+}
+.cv-info ol{
+    padding: 30px 0px;
+}
+.cv-info h2{
+    font-size: 24px;
+    font-weight: bold;
+}
+.cv-info p{
+    font-size: 16px;
+    line-height: 1.7;
+}
+#cv .section.two{
+    margin-bottom: 50px;
+}
+.professional, .cv-info {
+    margin-bottom: 20px;
+}
+
+.cv-info img {
+    max-width: 100%;
+    height: auto;
+    margin: 15px 0;
+}
+.cv-info img:hover{
+    transform: scale(1.03);
+}
+.cv-info .download-btn{
+    text-decoration: none;
+    padding: 5px 80px;  
+    font-size: 18px;  
+    border: 2px solid rgb(11, 11, 110);  
+    border-radius: 20px;  
+    background-color: white;  
+    color: rgb(11, 11, 110); 
+    margin-left: 40px; 
+    margin-bottom: 20px;
+    margin-top: 10px;
+
+}
+.cv-info .download-btn:hover {
+    cursor: pointer;
+    background-color: rgb(11, 11, 110);  
+    color: white; 
+}
+.cv-info .show-more{
+    color: blue;
+
+}
+.cv-info .show-more:hover{
+    text-decoration: underline;
+}
+
+
+/* adventure page styling */
+#adventures {
+    margin: 0;
+    padding: 0;
+    text-align: start;
+    margin-top: 60px;
+    margin-right: 20px;
+    margin-left: 110px;
+}
+
+#adventures article {
+    display: flex;
+    flex-wrap: wrap;  
+    gap: 20px; 
+    padding-bottom: 20px;
+    align-items: flex-start; /* Align items at the start */
+}
+
+#adventures .section.one {
+    padding-left: 20px; /* Reduced padding for smaller screens */
+    padding-right: 15px;
+    display: flex;
+    flex-wrap: wrap; /* Allows content to wrap if the viewport is too small */
+    gap: 20px; /* Space between the elements */
+    justify-content: flex-start;
+}
+
+#adventures h2 {
+    padding-left: 10px; /* Removed left padding for responsiveness */
+    padding-bottom: 30px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* Audio */
+.gallery-container, .audio {
+    flex: 1; /* Makes both containers take equal width */
+}
+
+.gallery-container {
+    display: flex;
+    flex: 1;
+    flex-direction: column; /* Ensure articles stack vertically */
+}
+
+.gallery-container p {
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+#adventures .audio img {
+    width: 100%; /* Make image responsive */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 400px; /* Set a maximum width */
+    display: block;
+    margin: 0 auto 10px auto; /* Center the image */
+}
+audio{
+    margin-top: 30px;
+}
+
+.audio h2 {
+    margin: 0;
+    padding: 0;
+}
+.audio{
+    align-items: center;
+    text-align: center;
+}
+
+#adventures article p {
+    flex: 1;  
+    margin: 0;
+    font-size: 16px;
+    padding-bottom: 20px;
+}
+
+article img {
+    flex: 1; /* Make the image take less space */
+    max-width: 50%; /* Ensure the image does not overflow */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Optional: Add rounded corners */
+}
+
+article img:hover, .audio img:hover {
+    transform: scale(1.03);
+}
+
+
+/* Adventure page section two */
+#adventures .section.two {
+    display: flex;
+    flex-direction: column; /* Stack all elements vertically */
+    align-items: center; /* Center all content */
+}
+#adventures .section.two h2{
+    font-weight: bold;
+    padding-right: 190px;
+
+}
+.blogs {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping of figures */
+    justify-content: center; /* Center the figures */
+    gap: 90px; /* Space between figures */
+}
+#adventures .section.two h2{
+    margin: 0;
+    padding: 0;
+    padding-bottom: 40px;
+}
+figure {
+    background: rgba(233, 234, 240, 1);
+    border: 1px solid gray; /* Border around the figure */
+    padding: 10px; /* Padding inside the figure */
+    text-align: center; /* Center the text in the figure */
+    width: 550px; /* Fixed width for the card effect */
+    height: 950px;
+    border-radius: 10px;
+}
+.blogs > figure:nth-of-type(3) {
+    background: rgba(233, 234, 240, 1);
+    border: 1px solid gray; /* Border around the figure */
+    padding: 10px; /* Padding inside the figure */
+    text-align: center; /* Center the text in the figure */
+    width: 700px; /* Fixed width for the card effect */
+    height: 890px;
+    margin: 0px 180px 80px;
+    line-height: 1.7;
+    font-size: 16px;
+}
+figure:hover{
+    transform: scale(1.03);
+}
+figure img{
+    width: 90%;
+    height: 30%;
+    padding-top: 15px;
+}
+figure p{
+    line-height: 1.7;
+    font-size: 16px;
+    padding: 5px 7px 290px 7px;
+}
+figcaption{
+    font-weight: 800;
+    margin: 15px 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
