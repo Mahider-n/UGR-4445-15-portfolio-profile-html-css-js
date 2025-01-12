@@ -7,6 +7,7 @@ function toggleMenu(){
 // about page
 document.getElementById('rightArrow').addEventListener('click', function() {
     window.location.href = 'education.html';  
+    
 });
 
 // buttons on about page 
@@ -27,6 +28,7 @@ closeButton.classList.add('close-btn');
 closeButton.innerHTML = '&times;'; // Close icon (× character)
 
 const enlargedImage = document.createElement('img');
+enlargedImage.alt = "Close-up view of a person reading a book.";
 const imageDescription = document.createElement('p');
 
 // Append content to modal
@@ -39,6 +41,7 @@ document.body.appendChild(modal); // Append modal to the body
 // Event listener for the Hobbies button
 document.querySelector('.btn.hobbies').addEventListener('click', function() {
     const hobbiesImage = document.querySelector('.image-container img'); // Get the hobbies image
+    hobbiesImage.alt = "A detailed view of the hobbies image"; 
 
     // Set modal content
     enlargedImage.src = hobbiesImage.src; // Set enlarged image source
@@ -51,6 +54,7 @@ document.querySelector('.btn.hobbies').addEventListener('click', function() {
 // Close modal when clicking the close button
 closeButton.addEventListener('click', function() {
     modal.style.display = 'none'; // Hide the modal
+    closeButton.alt = "Close the dialog or window";
 });
 
 // Close modal when clicking outside the content area
@@ -77,6 +81,7 @@ modal.addEventListener('click', function(event) {
  interestCloseButton.innerHTML = '&times;'; // Close icon (× character)
 
  const interestEnlargedImage = document.createElement('img');
+ interestEnlargedImage.alt = "A person deeply engaged in reading a book in a cozy setting."; 
  const interestImageDescription = document.createElement('p');
 
  // Append content to modal
@@ -89,6 +94,9 @@ modal.addEventListener('click', function(event) {
  // Event listener for the Interests button
  document.querySelector('.btn.interest').addEventListener('click', function() {
      const interestImage = document.querySelector('.image-container img:nth-child(2)'); // Get the interest image
+      interestImage.alt = "A person deeply engaged in reading a book in a cozy setting, surrounded by soft lighting and comfortable furniture.";
+     
+
 
      // Set modal content
      interestEnlargedImage.src = interestImage.src; // Set enlarged image source
